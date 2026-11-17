@@ -1,0 +1,13 @@
+
+{
+  "id": "/Class-9-history-MCQ-wbbse/",
+  "name": "Class 9 History MCQ",
+  "short_name": "History MCQ",
+  "description": "Class 9 WBBSE History MCQ Practice App in Bengali Medium.",
+  "start_url": "/Class-9-history-MCQ-wbbse/",
+  "scope": "/Class-9-history-MCQ-wbbse/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb"
+}
