@@ -1837,6 +1837,121 @@
             app = new HistoryQuizApp();
         };
     </script>
+
+<style>
+/* Mobile screen improvement */
+@media (max-width: 600px) {
+  #app-container {
+    padding: 10px !important;
+  }
+
+  #app-container button {
+    min-height: 42px;
+  }
+
+  #app-container h2 {
+    font-size: 19px;
+  }
+
+  #app-container p {
+    line-height: 1.4;
+  }
+}
+</style>
+
+<script>
+(function () {
+  const bengaliDigits = "০১২৩৪৫৬৭৮৯";
+  const englishDigits = "0123456789";
+
+  function convertDigits() {
+    const walker = document.createTreeWalker(
+      document.body,
+      NodeFilter.SHOW_TEXT
+    );
+
+    let node;
+    while (node = walker.nextNode()) {
+      if (node.parentElement.closest("script,style")) continue;
+
+      const converted = node.nodeValue.replace(
+        /[০-৯]/g,
+        digit => englishDigits[bengaliDigits.indexOf(digit)]
+      );
+
+      if (converted !== node.nodeValue) {
+        node.nodeValue = converted;
+      }
+    }
+  }
+
+  convertDigits();
+
+  const observer = new MutationObserver(convertDigits);
+  observer.observe(document.body, {
+    childList: true,
+    subtree: true
+  });
+})();
+</script>
+
+<style>
+/* Mobile screen improvement */
+@media (max-width: 600px) {
+  #app-container {
+    padding: 10px !important;
+  }
+
+  #app-container button {
+    min-height: 42px;
+  }
+
+  #app-container h2 {
+    font-size: 19px;
+  }
+
+  #app-container p {
+    line-height: 1.4;
+  }
+}
+</style>
+
+<script>
+(function () {
+  const bengaliDigits = "০১২৩৪৫৬৭৮৯";
+  const englishDigits = "0123456789";
+
+  function convertDigits() {
+    const walker = document.createTreeWalker(
+      document.body,
+      NodeFilter.SHOW_TEXT
+    );
+
+    let node;
+    while (node = walker.nextNode()) {
+      if (node.parentElement.closest("script,style")) continue;
+
+      const converted = node.nodeValue.replace(
+        /[০-৯]/g,
+        digit => englishDigits[bengaliDigits.indexOf(digit)]
+      );
+
+      if (converted !== node.nodeValue) {
+        node.nodeValue = converted;
+      }
+    }
+  }
+
+  convertDigits();
+
+  const observer = new MutationObserver(convertDigits);
+  observer.observe(document.body, {
+    childList: true,
+    subtree: true
+  });
+})();
+</script>
+
 </body>
 </html>
 ```
