@@ -1,11 +1,13 @@
 
 {
+  "id": "./",
   "name": "Class 9 History MCQ",
   "short_name": "History MCQ",
-  "description": "Class 9 History Quiz",
+  "description": "WBBSE Class 9 History MCQ Quiz",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
+  "display_override": ["standalone"],
   "orientation": "portrait",
   "background_color": "#ffffff",
   "theme_color": "#173b75",
